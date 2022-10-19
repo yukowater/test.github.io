@@ -1,0 +1,992 @@
+@charset "utf-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family:
+        /*"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif, */
+        YuGothic, "Yu Gothic Medium", "Yu Gothic", BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif, "Shippori Mincho";
+    line-height: 1.7;
+    color: black;
+}
+
+section {
+    /* padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px; */
+    padding: 80px;
+}
+
+.title_en {
+    /* background-color: lightgray; */
+    font-family: "Crimson Pro", serif;
+    font-size: 2em;
+}
+
+.title_jp {
+    /* background-color: lightgray; */
+    margin-left: 20px;
+    padding-top: 10px;
+    font-family: "Shippori Mincho";
+}
+
+/* HEADER
+------------------------------- */
+.page_header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+.logo {
+    /* background-color: gray; */
+    width: 15%;
+}
+
+.main_logo {
+    /* background-color: lightgray; */
+    width: 130%;
+    margin-top: -10px;
+}
+
+img {
+    max-width: 100%;
+    /* width: 20rem; */
+}
+
+.nav {
+    /* background: gray; */
+    width: 80%;
+}
+
+.main_nav {
+    /* background: gray; */
+    display: flex;
+    list-style: none;
+    margin-top: 5px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+.main_nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main_nav a {
+    position: relative;
+}
+
+.main_nav a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: -10px;
+    transform: scale(0, 1);
+    transform-origin: center-top;
+    transition: transform 0.3s;
+}
+
+.main_nav a:hover:after {
+    transform: scale(1, 1);
+}
+
+.main_nav a:hover {
+    color: gray;
+}
+
+.main_nav li {
+    margin-left: 20px;
+    /* background-color: lightgray; */
+}
+
+/* HOME
+------------------------------- */
+.home {
+    background: url(../img/lawyer-rvs.jpg) center/cover;
+    min-height: 100vh;
+}
+
+
+.home_text {
+    /* background-color: gray; */
+    margin-top: 16rem;
+    margin-bottom: 20px;
+    width: 45%;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+.home_text h5 {
+    /* background-color: lightgray; */
+    margin-bottom: 20px;
+    font-family: "Crimson Pro", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.home_text h1 {
+    /* background-color: lightgray; */
+    margin-bottom: 30px;
+    font-family: "Shippori Mincho", serif;
+    font-size: 50px;
+    letter-spacing: 10px;
+    line-height: 130%;
+}
+
+.home_text p {
+    font-family: "Shippori Mincho", serif;
+    line-height: 2.25;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.corporate_philosophy {
+    font-family: "Shippori Mincho", serif;
+    line-height: 2.25;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* a href + 疑似要素 */
+.corporate_philosophy a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+.corporate_philosophy a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 40px;
+    border-bottom: 1px solid #538cff;
+}
+
+.corporate_philosophy a:hover {
+    width: 23%;
+    color: #fff;
+    border-bottom: 1px solid #538cff;
+    transition: all 2s ease;
+}
+
+.corporate_philosophy ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f0da";
+    color: #fff;
+    margin-left: 40px;
+}
+
+/* ./ a href + 疑似要素 */
+
+/* EVENT
+------------------------------- */
+.event {
+    background-color: #2C3639;
+    color: white;
+}
+
+.event_container {
+    display: flex;
+    grid-template-columns: 2fr;
+    gap: 60px;
+}
+
+.seminar,
+.newsletter {
+    /* border-style: solid; */
+    width: 100%;
+}
+
+.seminar_title {
+    /* background-color: gray; */
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.seminar_title .title_en {
+    /* background-color: lightgray; */
+    font-family: "Crimson Pro", serif;
+    font-size: 2em;
+}
+
+.seminar_title .title_jp {
+    /* background-color: lightgray; */
+    margin-left: 20px;
+    padding-top: 15px;
+    font-family: "Shippori Mincho";
+}
+
+/* a href + 疑似要素 */
+.seminar_link a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+.seminar_link a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 40px;
+    border-bottom: 1px solid #538cff;
+}
+
+.seminar_link a:hover {
+    width: 23%;
+    color: #fff;
+    border-bottom: 1px solid #538cff;
+    transition: all 2s ease;
+}
+
+/* ./a href + 疑似要素 */
+
+.schedule_list {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+
+}
+
+.schedule_list::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+.schedule {
+    /* background-color: gray; */
+    margin-bottom: 20px;
+    display: flex;
+    list-style: none;
+}
+
+.schedule>li:nth-child(n + 2) {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+}
+
+.schedule li:nth-child(n+2) {
+    margin-right: 7px;
+    background-color: lightgray;
+    color: #000;
+}
+
+.schedule>li:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    margin-left: -24px;
+}
+
+.schedule li {
+    margin-right: 20px;
+    /* background-color: lightgray; */
+    position: relative;
+}
+
+.more {
+    /* background-color: gray; */
+    margin-bottom: 20px;
+    width: 50%;
+    position: relative;
+    font-weight: bold;
+}
+
+.more::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.more ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f850";
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* TOPICS
+------------------------------- */
+.topics {
+    background-color: #000;
+    color: white;
+}
+
+.topics_container {
+    grid-template-columns: 3fr;
+}
+
+.topic_caption {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.caption {
+    width: 30%;
+}
+
+.topic_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+    display: flex;
+}
+
+.topic_title .title_jp {
+    margin-left: 20px;
+    padding-top: 14px;
+}
+
+.topic_img {
+    justify-content: center;
+    display: flex;
+
+}
+
+.photo {
+    /* background-color: lightgray; */
+    display: inline-block;
+    height: 236px;
+}
+
+.photo img {
+    height: 100%;
+}
+
+.topic_text {
+    /* background-color: gray; */
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.schedule_list {
+    margin-bottom: 47px;
+}
+
+.topic_text li:nth-child(n+2) {
+    margin-right: 7px;
+    color: #000
+}
+
+.schedule_list p {
+    /* position: relative; */
+    margin-bottom: 24px;
+}
+
+/* ATTORNEY
+------------------------------- */
+.attorneys {
+    background-color: #2C3639;
+    color: #fff;
+}
+
+.attorney {
+    margin: 20px auto;
+}
+
+.attorney_title {
+    /* background-color: gray; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+    display: flex;
+}
+
+.attorney_title .title_jp {
+    /* background-color: lightgray; */
+    margin-left: 20px;
+    padding-top: 14px;
+    width: 30%;
+}
+
+.attorney_text {
+    /* background-color: gray; */
+    width: 70%;
+    margin-top: 40px;
+}
+
+.attorney_text p {
+    /* background-color: lightgray; */
+    width: 80%;
+}
+
+.attorney_menu {
+    /* background-color: gray; */
+    margin-top: 40px;
+    width: 30%;
+}
+
+.attorney_menu {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 10%;
+}
+
+.attorney_menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+.attorney_menu ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f0da";
+    color: #fff;
+    margin-left: 40px;
+}
+
+.attorney_menu p {
+    padding-bottom: 10px;
+}
+
+/* AREA
+------------------------------- */
+.area {
+    background-color: black;
+    color: white;
+}
+
+.area_fileld {
+    margin: 20px auto;
+}
+
+.area_title {
+    /* background-color: gray; */
+    width: 50%;
+    display: flex;
+}
+
+.area_title .title_jp {
+    /* background-color: lightgray; */
+    margin-left: 20px;
+    padding-top: 14px;
+}
+
+.area_text {
+    /* background-color: gray; */
+    width: 70%;
+    margin-top: 10px;
+}
+
+.area_text p {
+    /* background-color: lightgray; */
+    width: 80%;
+}
+
+.area_menu {
+    /* background-color: gray; */
+    margin-top: 10px;
+    width: 30%;
+}
+
+.area_menu {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 10%;
+}
+
+.area_menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+.area_menu p {
+    padding-bottom: 10px;
+}
+
+.area_menu ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f0da";
+    color: #fff;
+    margin-left: 55px;
+}
+
+
+/* ABOUT
+------------------------------- */
+.about {
+    background-color: #000;
+    color: #fff;
+}
+
+.about_us {
+    margin: 20px auto;
+}
+
+.about_title {
+    /* background-color: gray; */
+    width: 65%;
+    display: flex;
+}
+
+.about_title .title_jp {
+    /* background-color: lightgray; */
+    margin-left: 20px;
+    padding-top: 14px;
+}
+
+.about_text {
+    /* background-color: gray; */
+    margin-top: 10px;
+}
+
+.about_text p {
+    /* background-color: lightgray; */
+    width: 50%;
+}
+
+.content_sentence {
+    /* background-color: gray; */
+    margin-top: 10px;
+}
+
+.about_menu {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.menu_philosophy {
+    /* background-color: gray; */
+    margin-top: 10px;
+    position: relative;
+    margin-right: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.menu_philosophy::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+.menu_information {
+    /* background-color: gray; */
+    margin-top: 10px;
+    position: relative;
+    margin-right: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.menu_information::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+
+/* 擬似要素 arrow */
+.menu_philosophy ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f0da";
+    color: #fff;
+    margin-left: 40px;
+}
+
+.menu_information ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f0da";
+    color: #fff;
+    margin-left: 40px;
+}
+
+/* ./arrow */
+
+/* NEWS
+------------------------------- */
+.news {
+    background-color: #2C3639;
+    color: #fff;
+}
+
+.news_container {
+    display: flex;
+    grid-column: 1 / 3;
+    width: 100%;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+/*  news_title_global  */
+.news_title_global,
+.news_schedule {
+    /* border-style: solid; */
+    justify-content: center;
+}
+
+.news_title_global {
+    width: 33%;
+}
+
+/*  news_schedule  */
+.schedule_last {
+    padding-top: 26px;
+}
+
+/* 囲み線 上線・横線*/
+.news_schedule {
+    width: 80%;
+    position: relative;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* .news_schedule {
+    position: relative;
+} */
+
+.news_schedule::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+.news_schedule_list {
+    border-bottom: 1px solid#fff;
+    position: relative;
+}
+
+.news_schedule_list::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #538cff;
+}
+
+.news_schedule_list:last-of-type {
+    content: none;
+}
+
+.news_schedule_list:last-child {
+    border: none
+}
+
+.news_schedule_list::before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    content: "";
+    background-color: #538cff;
+}
+
+
+/* ./囲み線 下線 */
+.title_jp_global {
+    /* background-color: gray; */
+    margin-top: 10px;
+
+}
+
+.title_en_global h2 {
+    /* background-color: lightgray; */
+    margin: 0 155px 0 0;
+}
+
+.title_jp_global p {
+    /* background-color: lightgray; */
+    margin: 0 199px 0 0;
+}
+
+.more {
+    /* background-color: gray; */
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.more::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.more ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f850";
+    color: #fff;
+    margin-left: 10px;
+
+}
+
+/*  news_schedule  */
+/*.news_schedule_list {
+     background-color: gray; `
+    margin-bottom: 20px;
+    height: 134px;
+}*/
+
+.schedule_last li {
+    margin: 10px 10px 10px 0;
+    /* background-color: lightgray; */
+}
+
+.schedule_last {
+    display: flex;
+    list-style: none;
+}
+
+.schedule_last li:nth-child(2) {
+    margin-left: 30px;
+}
+
+.schedule_last>li:nth-child(n +2) {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.schedule_last>li:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    margin-left: -40px;
+}
+
+.schedule_last li:nth-child(2) {
+    margin-right: 20px;
+    background-color: rgb(97, 94, 94);
+    position: relative;
+}
+
+.schedule_last li {
+    padding-right: 10px;
+}
+
+.note {
+    /* background-color: lightgray; */
+    padding-bottom: 30px;
+}
+
+
+/* FOOTER
+------------------------------- */
+.footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.footer_container {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.5fr 0.5fr 0.5fr;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.footer_logo {
+    /* background-color: gray; */
+    height: 111px;
+    width: 60%;
+}
+
+.footer_logo_img {
+    /* background-color: lightgray; */
+    margin-bottom: 20px;
+}
+
+.footer_adress {
+    /* background-color: gray; */
+    margin-top: 25px;
+    height: 148px;
+    width: 80%;
+}
+
+.adress {
+    /* background-color: lightgray; */
+    margin-top: 50px;
+    color: gray;
+}
+
+/* footer_nav */
+.footer_nav {
+    height: 362px;
+    /* background-color: gray; */
+    margin-top: 20px;
+}
+
+
+.top p {
+    /* background-color: lightgray; */
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.child,
+.line_left {
+    border-left: 1px solid #fff;
+}
+
+.policy {
+    /* background-color: gray; */
+    margin-top: 25px;
+}
+
+.policy a {
+    color: #fff;
+}
+
+p a {
+    color: #fff;
+}
+
+.under_line {
+    text-decoration: none;
+    border-bottom: 1px #fff solid;
+    padding-bottom: 3px;
+}
+
+a:hover {
+    color: #538cff;
+    transition: 1s;
+}
+
+.line_left p {
+    margin: 10px;
+}
+
+.line_left p {
+    margin-bottom: 10px;
+    /* color: gray; */
+    position: relative;
+    color: gray;
+}
+
+.line_left p:hover {
+    color: #538cff;
+    border-bottom: 1px #538cff solid;
+    width: 80%;
+    transition: 1s;
+    transition: cubic-beziercubic-bezier(.25, .6, .64, 1.02);
+}
+
+.line_left p::after {
+    content: none;
+}
+
+.child> :last-child {
+    margin-bottom: 35px;
+}
+
+/* 変形 */
+.pagetop p {
+    transition: all 1s ease;
+}
+
+.pagetop p:hover {
+    color: #538cff;
+    transform: rotateY(30deg);
+}
+
+.pagetop,
+.arow {
+    /* background-color: lightgray; */
+    margin-bottom: 20px;
+    height: 25px;
+}
+
+.footer_pagetop {
+    /* background-color: gray; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 362px;
+}
+
+.pagetop::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.pagetop ::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f35b";
+    color: #fff;
+    margin-left: 22px;
+    font-size: 32px;
+}
+
+.pagetop::after {
+    content: none;
+}
+
+/* COPYRIGHT
+------------------------------- */
+.copyright {
+    background-color: #2C3639;
+    text-align: center;
+    padding: 26px 0;
+}
+
+.wrapper p {
+    color: #fff;
+}
